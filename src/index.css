@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --indigo-500: #6366f1;
+    --indigo-600: #4f46e5;
+    --purple-500: #a855f7;
+    --purple-600: #9333ea;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+    --green-500: #22c55e;
+    --green-600: #16a34a;
+  }
+}
+
+body {
+  @apply antialiased;
+}
+
+.CircularProgressbar-text {
+  @apply font-semibold;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glass effect */
+.backdrop-blur-lg {
+  backdrop-filter: blur(20px);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
